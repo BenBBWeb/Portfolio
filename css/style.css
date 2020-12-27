@@ -127,10 +127,12 @@ body
 /*****************GameBox*******************/
 .gamebox
 {
-  background-color: #333333;
+  /*background-color: #333333;/**/
+  background-color: #000000;
   height:256px;
   overflow:hidden; /* so whats outside is hidden */
   margin: 5px 0 5px 0;
+  border:2px solid #333333;/**/
 }
 .gamebox a img
 {
@@ -277,11 +279,10 @@ body
   }*/
   
   /**********Background, body and border***************/
-  /*only padding and margin change*/
   #chaosborder { 
-    border: 10px solid transparent;
+    border: 8px solid transparent;
     padding: 0;
-    margin: 10;
+    margin: 8;
     border-color: rgb(0, 6, 238);
   }
   
