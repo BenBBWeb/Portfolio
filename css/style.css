@@ -4,7 +4,8 @@
 */
 
 /**********Background, body and border***************/
-#chaosborder { 
+#chaosborder
+{ 
   border: 10px solid transparent;
   padding: 45px;
   margin: 10px;
@@ -15,6 +16,16 @@ body
   background-color: #000000;
 }
 
+p a
+{
+  color:Purple;
+  text-decoration:none; /*removes underline*/
+}
+p a:hover
+{
+  color:Yellow;
+  font-weight:bold;
+}
 /***************Header******************/
 header
 {
