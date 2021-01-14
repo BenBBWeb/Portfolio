@@ -207,35 +207,6 @@ body
   /*text-decoration: underline;*/
 }
 
-.trailer a:link
-{
-  color: green;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-.trailer a:visited
-{
-  color: pink;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-.trailer a:hover
-{
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-.trailer a:active
-{
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-
 .trailer div
 {
   padding-top: 16px;
