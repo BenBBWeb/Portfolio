@@ -52,25 +52,107 @@
       
       <h3>Summary</h3>
       <p>
-      For the course CS562 - Advanced Rendering Techniques, I develloped a 
+      This framework I developed during the course CS562 - Advanced Rendering Techniques that I attended at Digipen - Bilbao during the Fall 2020 semester.
+      In it I implemented the following rendering techniques.
       </p>
       
-      <h3>Project Details</h3>
+      <h3>Framework Details</h3>
       <p>
-      I wrote the framework entirelly in c++ with <a href="https://www.opengl.org/">OpenGL</a> and using the following libraries: <a href="https://www.glfw.org/">GLFW</a>, <a href="http://assimp.org/">Assimp</a>,<a href="https://github.com/ocornut/imgui">Dear ImGui</a>,<a href="https://glad.dav1d.de/">Glad</a>,<a href="https://glm.g-truc.net/0.9.9/index.html">GLM</a>,<a href="https://github.com/open-source-parsers/jsoncpp">JsonCpp</a>,<a href="https://github.com/nothings/stb/blob/master/stb_image.h">stb_image</a>.</p>
+      I wrote the framework entirelly in c++ with <a href="https://www.opengl.org/">OpenGL</a> and using the following libraries: <a href="https://www.glfw.org/">GLFW</a>, <a href="http://assimp.org/">Assimp</a>, <a href="https://github.com/ocornut/imgui">Dear ImGui</a>, <a href="https://glad.dav1d.de/">Glad</a>, <a href="https://glm.g-truc.net/0.9.9/index.html">GLM</a>, <a href="https://github.com/open-source-parsers/jsoncpp">JsonCpp</a>, <a href="https://github.com/nothings/stb/blob/master/stb_image.h">stb_image</a>.
       </p>
       
-      <h3>My Contribution</h3>
       <p>
-      I did many character mechanics.
+      All the rendering is done in a separate thread, leaving the main thread free for other uses. As this framework was only used for rendering, the main thread does almost nothing.
+
+      The rendering takes the differed shading approach.
+
+      I implemented some lighting optimizations which enable having hundreds of lights with minimal time cost.
+
+      Most of the scenes use a g-buffer with depth, normals, for most of the scenes.
       </p>
+      
+      <!-- AMBIENT OCCLUSION -->
+      <div class="proj_tech">
+      <h3>Ambient Occlusion</h3>
+      <p><img src=".././img/PersonalProjects/AdvancedGraphics/PhongTessellation01.png" alt="Phong Tessellation Screenshot 01"></img></p>
+      <p>This technique creates additional geometry on flat faces of a mesh to make the mesh look more roundish.</p>
+      
+      <p>
+      I implemented the technique as described in the paper <a href="https://perso.telecom-paristech.fr/boubek/papers/PhongTessellation/PhongTessellation.pdf">Phong Tessellation</a>.
+      </p>
+      
+      </div >
+      
+      <!-- AA -->
+      <div class="proj_tech">
+      <h3>Anti-Aliasing</h3>
+      <p><img src=".././img/PersonalProjects/AdvancedGraphics/PhongTessellation01.png" alt="Phong Tessellation Screenshot 01"></img></p>
+      <h4>Image-Space Anti-Aliasing</h4>
+      <p>blabla</p>
+      <h4>Super-Sampling Anti-Aliasing</h4>
+      <p>blabla</p>
+      </div >
+      
+      <!-- BLOOM -->
+      <div class="proj_tech">
+      
+      <h3>Bloom</h3>
+      <p><img src=".././img/PersonalProjects/AdvancedGraphics/Bloom01.png" alt="Phong Tessellation Screenshot 01"></img></p>
+      <p><img src=".././img/PersonalProjects/AdvancedGraphics/Bloom02.png" alt="Phong Tessellation Screenshot 01"></img></p>
+      <p>This post processing technique makes high luminance pixels 'spill' into their neighboring pixels, thus creating a hallo effect.</p>  
+      
+      </div >
+      
+      <!-- DECALS -->
+      <div class="proj_tech">
+      
+      <h3>Decals</h3>
+      <p><img src=".././img/PersonalProjects/AdvancedGraphics/Decals01.png" alt="Decals Screenshot 01"></img></p>
+      <p><img src=".././img/PersonalProjects/AdvancedGraphics/Decals02.png" alt="Decals Screenshot 02"></img></p>
+      <p>This technique creates additional geometry on flat faces of a mesh to make the mesh look more roundish.</p>
+      
+      <p>
+      I implemented the technique as described in the paper <a href="https://perso.telecom-paristech.fr/boubek/papers/PhongTessellation/PhongTessellation.pdf">Phong Tessellation</a>.
+      </p>
+      
+      </div >
+      
+      <!-- PHONG TESSELATION -->
+      <div class="proj_tech">
+      
+      <h3>Phong Tessellation</h3>     
+      <p><img src=".././img/PersonalProjects/AdvancedGraphics/PhongTessellation01.png" alt="Phong Tessellation Screenshot 01"></img></p>
+      <p>This technique creates additional geometry on flat faces of a mesh to make the mesh look more roundish. It takes into acount the distance to the camera and the facing of the faces to avoid creating geometry where it in not needed.</p>
+      
+      <p>
+      I implemented the technique as described in the paper <a href="https://perso.telecom-paristech.fr/boubek/papers/PhongTessellation/PhongTessellation.pdf">Phong Tessellation</a>.
+      </p>
+      
+      </div >
+      
+      <!-- FINAL PROJECT -->
+      <div class="proj_tech">
+      
+      <h3>Screen Space Lines For Conveying Shape</h3>
+      <p><img src=".././img/PersonalProjects/AdvancedGraphics/PhongTessellation01.png" alt="Phong Tessellation Screenshot 01"></img></p>
+      <p>This technique creates additional geometry on flat faces of a mesh to make the mesh look more roundish.</p>
+      
+      <p>
+      I implemented the technique as described in the paper <a href="https://perso.telecom-paristech.fr/boubek/papers/PhongTessellation/PhongTessellation.pdf">Phong Tessellation</a>.
+      </p>
+      
+      </div >
       
       <h3>Download</h3>
       <p>
-      Click <a href="https://drive.google.com/open?id=1Qg5jUq4qhpcIPFmJWWKy7aD2uEltEEXp">here</a> to download the installer.
+      Click <a href="https://error404/">here</a> to download the executable.
       </p>
+      
     </div>
 
+    <p><br><center>
+    <a href="#chaosborder">GO TO THE TOP</a>
+    </center></p>
 
   </div>
   
