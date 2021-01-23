@@ -49,20 +49,27 @@
       <h3>Teaser Trailer</h3>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/xlEK2BRnqOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="teaser trailer"></iframe>
       -->
-      
-      <div class="proj_tech">
-      <p><img src=".././img/PersonalProjects/Physics/ramp-boxes-falling.gif" alt="ramp-boxes-falling.gif"></img></p>
-      </div>
-      
+                 
       <h3>Summary</h3>
       <p>
-      This is a 3D physics engine I developed during the course CS550 - Physics Simulation that I attended at Digipen - Bilbao during the Spring 2020 semester.
+      3D physics engine I developed during the course CS550 - Physics Simulation that I attended at <a href="https://www.digipen.es/">Digipen - Bilbao</a> during the Spring 2020 semester.
+      </p>
+      <p>
+      It features rigid body dynamics working for any convex shape.
+      The integration uses the <strong>semi-implicit Euler method</strong>.
+      The inertia tensor is computed from the geometry assuming the mass is evenly distributed throughout the volume.
+      The collision detection can be done with both <strong>SAT</strong> and <strong>JGK</strong>. Both use half-edge meshes in order to optimize using hill-climbing.
+      SAT also has contact generation.
+      The collision resolution uses an <strong>iterative contact constraints solver</strong>.
+      </p>
+      <p>
+      You can read the details of my implementation <a href="../other/cs562_b.morisset_FinalProjectReport.pdf">here</a>.
       </p>
       
-      <h3>Download</h3>
+      <!--<h3>Download</h3>
       <p>
       Click <a href="https://error404/">here</a> to download the executable.
-      </p>
+      </p>-->
       
       <h3>Framework Details</h3>
       <p>
@@ -70,11 +77,27 @@
       </p>
       <p>
       The rendering has been kept to a bare minimum as it isn't the focus of this project.
-      </p>  
-      <p>
-      You can read the details of my implementation <a href="../other/cs562_b.morisset_FinalProjectReport.pdf">here</a>.
-      </p>
+      </p>      
       
+      <h3>Gallery</h3>
+      <p>3 boxes falling on ramps with different friction coeficients:</p>
+      <p><img src=".././img/PersonalProjects/Physics/ramp-boxes-falling.gif"></img></p>
+      <p>stack of 5 boxes being perturbed from the bottom:</p>
+      <p><img src=".././img/PersonalProjects/Physics/5_box_stacking_3.gif"></img></p>
+      <p>2 stacks of 2 boxes with different friction coefficients sliding down a slope:</p>
+      <p><img src=".././img/PersonalProjects/Physics/sliding_couples_1.gif"></img></p>
+      <p>falling cylinder:</p>
+      <p><img src=".././img/PersonalProjects/Physics/falling-cylinder.gif"></img></p>
+      <p>stack of 3 boxes being perturbed from the bottom:</p>
+      <p><img src=".././img/PersonalProjects/Physics/3_box_stacking_3.gif"></img></p>
+      <p>stack of 3 boxes being perturbed from the middle:</p>
+      <p><img src=".././img/PersonalProjects/Physics/3_box_stacking_5.gif"></img></p>
+      <p>stack of 3 boxes being perturbed from the top:</p>
+      <p><img src=".././img/PersonalProjects/Physics/3_box_stacking_6.gif"></img></p>
+      <p>Minkowsky difference of a cylinder and a cube:</p>
+      <p><img src=".././img/PersonalProjects/Physics/minkowsky_diff_2.gif"></img></p>
+      <p>Minkowsky difference of a cube and an octahedron:</p>
+      <p><img src=".././img/PersonalProjects/Physics/minkowsky_diff_1.gif"></img></p>
       </div>
       
     </div>
