@@ -145,6 +145,8 @@ li
   display: block; 
 }
 
+
+
 /**********************************************************/
 /**                        Games                         **/
 /**********************************************************/
@@ -196,6 +198,22 @@ li
   text-align: center
 }
 
+.trailer img
+{
+  /*make image adjust to window size but dont get bigger than 480p*/
+  width: 100%;
+  height: calc((9/16)*100vw);
+  max-width: 640px;
+  max-height: calc((9/16)*640px);
+  
+  float: center;
+  
+  /*to make it centered*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .trailer h3
 {
   padding-top: 10px;
@@ -221,77 +239,6 @@ li
   
   /*vertical-align: top;*/
 }
-
-
-/*****************Project Technique*******************/
-.proj_tech
-{
-  background-color: #000000;
-
-  margin: 35px 0 15px 0;
-  /*border:2px solid #333333;*/
-  
-  /*display: block; /*not sure if this is needed*/ 
-}
-
-.proj_tech iframe
-{
-  /*make video adjust to window size but dont get bigger than 480p*/
-  width: 100%;
-  height: calc(0.5*100vw);
-  max-width: 640px;
-  max-height: 480px;
-  float: center;
-  
-  /*to make it centered*/
-  display: block; 
-  margin: auto;
-  text-align: center
-}
-
-.proj_tech img
-{
-  /*make image adjust to window size but dont get bigger than 480p*/
-  width: 100%;
-  height: calc((9/16)*100vw);
-  max-width: 640px;
-  max-height: calc((9/16)*640px);
-  
-  float: center;
-  
-  /*to make it centered*/
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.proj_tech h3
-{
-  padding-top: 10px;
-  /*color: yellow;*/
-  background-color: transparent;
-  /*text-decoration: underline;*/
-}
-
-.proj_tech div
-{
-  padding-top: 16px;
-}
-
-.proj_tech h5
-{
-  padding-left: 16px;
-}
-
-.proj_tech h5,
-.proj_tech p.inl
-{
-  display: inline;
-  
-  /*vertical-align: top;*/
-}
-
-
 
 /**********************************************************/
 /**                      Pixel Art                       **/
