@@ -7,7 +7,7 @@
 -->
 
 <head>
-  <title>BenBB | Space Partitioning Project</title>
+  <title>BenBB | Spatial Partitioning Project</title>
 
   <meta charset="UTF-8">
   <meta name="description" content="BenBB website">
@@ -26,7 +26,7 @@
     <h1>
       <div>
       <span style="color: red">BenBB:</span>
-      <span style="color: white"> Space Partitioning Project</span>
+      <span style="color: white"> Spatial Partitioning Project</span>
       </div>
     </h1>
   </header>
@@ -36,45 +36,98 @@
       <li><a href="../index.html">·About·</a></li>
       <li><a href="../games.html">·Games·</a></li>
       <li><a href="../personal_projects.html">·Personal Projects·</a></li>
-      <li><a href="../contact.html">·Contact·</a></li>
+       
       <li class="secret" title="you found the secret tab!"><a href="../pixelart.html">·</a></li>
     </ul>
   </nav> 
-  
+
   <div class="container">
-  
-    
+   
     <div class="trailer">
-      <h3>Gameplay Video</h3>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/DDoSbFU9IgE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Gameplay video!"></iframe>
-      
       <h3>Summary</h3>
       <p>
-      Make the sheep transport electricity from the anode to the cathode by luring them with apples. Place other objects to avoid getting them eaten by the wolves. 
+      I developed this framework during the course CS350 - Advanced Computer Graphics II that I attended at Digipen - Bilbao during the Spring 2020 semester.
+      In it I implemented the following spatial partitioning techniques:
+      <a href="#BVs">Bounding Volumes</a>, 
+      <a href="#BVH">Bounding Volume Hierarchy</a>, 
+      <a href="#Octree">Octree</a>, 
+      <a href="#KDtree">KD-Tree</a>.
       </p>
       
-      <h3>Project Details</h3>
+      <h3>Framework Details</h3>
       <p>
-      Made with unity in 48h for the <a href="https://globalgamejam.org/">Global Game Jam</a> 2018 by a team of 2. Emilia Paredes and myself.</p>
+      I wrote the framework entirelly in c++ with <a href="https://www.opengl.org/">OpenGL</a> and using the following libraries: 
+      <a href="https://www.glfw.org/">GLFW</a>, 
+      <a href="https://github.com/ocornut/imgui">Dear ImGui</a>, 
+      <a href="https://glad.dav1d.de/">Glad</a>, 
+      <a href="https://glm.g-truc.net/0.9.9/index.html">GLM</a>, 
+      <a href="https://github.com/google/googletest">GoogleTest</a>, 
+      <a href="https://github.com/KhronosGroup/EGL-Registry/tree/master/api/KHR">KHR</a>.
       </p>
       
-      <h3>My Contribution</h3>
       <p>
-      I came up with the idea and did all the programming.
+      The implemented techniques are useful for optimizing rendering as well as collisions.
+      </p> 
+      <p>
+      The rendering has been kept to a bare minimum as it is not the focus of this project.
+      </p>   
+      
+      <!-- BOUNDING VOLUMES -->
+      <div id="BVs">
+      <h3>Bounding Volumes</h3>
+      <p><img src=".././img/PersonalProjects/SpatialPartitioning/BV01.png"></img></p>
+      <p><img src=".././img/PersonalProjects/SpatialPartitioning/BV02.png"></img></p>
+      <p><img src=".././img/PersonalProjects/SpatialPartitioning/BV03.png"></img></p>
+      
+      <p>
+      Before using the actual geometry of the object it is often faster to first check with a bounding approximation.
+      This framework supports AABBs and Spheres as bounding volumes.
+      </p>
+      <p>
+      I implemented two methods to compute the AABB bounding volume: A, B
+      </p>
+      <p>
+      I implemented three methods to compute the Sphere bounding volume: centroid cethod, Ritter's Method and Ritter's iterative improvement method.
+      </p> 
+      </div >
+      
+      <!-- BOUNDING VOLUME HIERARCHY -->
+      <div id="BVH">
+      <h3>Bounding Volume Hierarchy</h3>
+      
+      <p><img src=".././img/PersonalProjects/SpatialPartitioning/BVH01.png" alt="Screen-Space Anti-Aliasing screenshot"></img></p>
+      
+      <p>
+      I implemented it as a binary tree in which each leaf is an AABB that tightly encapsulates the objects it contains.
       </p>
       
-      <h3>Download</h3>
-      <p>
-      Click <a href="https://drive.google.com/open?id=1LtepSqRmMlbWsUXQRWy9P1lMSRSA7oUD">here</a> to download the .exe.
-      </p>
-      <p>
-      Or you can go to the jam submission <a href="https://globalgamejam.org/2018/games/electro-sheep">here</a>.
-      </p>
+      <!-- OCTREE -->
+      <div id="Octree">
+      
+      <h3>Octree</h3>
+      <p><img src=".././img/PersonalProjects/SpatialPartitioning/Octree01.png"></img></p>
+      <p><img src=".././img/PersonalProjects/SpatialPartitioning/Octree02.png"></img></p>
+      <p>This spatial partitioning data structure divides space evenly in octants recursivelly until the stop conditions are met. I implemented it using locational codes which reduces drastically reduces the memory needed to store in each octant the reference its children. Also, I implemented the octree as an array to improve memory coherence. </p>  
+      
+      </div >
+      
+      <!-- KD_TREE -->
+      <div id="KDtree">
+      
+      <h3>KD-Tree</h3>
+      <p><img src=".././img/PersonalProjects/SpatialPartitioning/KdTree03.png"></img></p>
+      <p><img src=".././img/PersonalProjects/SpatialPartitioning/KdTree06.png"></img></p>
+      <p>This spatial partitioning data structure divides the space one axis at a time without dividing along the same axis two times in a row. It takes the form of a binary tree that stores the triangles at the leaves.</p>        
+      
+      </div >
+      
     </div>
 
+    <p><br><center>
+    <a href="#chaosborder">GO TO THE TOP</a>
+    </center></p>
 
   </div>
-  
   
 </body>
 </html>
