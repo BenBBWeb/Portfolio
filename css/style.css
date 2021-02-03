@@ -134,6 +134,27 @@ li
   padding:0 20px 0 0; /* top right bot left */
 }
 
+/******************Featured*******************/
+.featured
+{
+}
+
+.featured li a div
+{
+  display: inline-block;
+  width: 40%
+}
+
+.featured li a div
+{
+  width:calc(40% - 2*2px); /*padding is 2px*/
+  padding:2px;
+}
+.featured li a div:hover
+{
+  border:2px solid yellow;
+  padding:0px;
+}
 
 /*****************Container*******************/
 .container
@@ -305,6 +326,23 @@ li
   {
     height:256px;
     width:256px;
+  }
+  
+  /******************Featured*******************/
+  .featured
+  {
+  }
+
+  .featured li a div
+  {
+    display: inline-block;
+    width:256px;
+  }
+
+  .featured li a div
+  {
+    display: inline-block;
+    /*border:2px solid #333333;*/
   }
   
   /*****************GameBox*******************/
