@@ -139,10 +139,18 @@ li
 {
 }
 
+.featured li div
+{
+  display: inline-block;
+  width:29%;
+  overflow: hidden;
+}
+
 .featured li a div
 {
   display: inline-block;
-  width: 40%
+  width: 40%;
+  max-width: 256px;
 }
 
 .featured li a div
@@ -154,6 +162,14 @@ li
 {
   border:2px solid yellow;
   padding:0px;
+}
+
+#AA_image
+{ 
+  width: 512px;
+  height: 512px;
+  max-width: 512px;
+  max-height: 512px;
 }
 
 /*****************Container*******************/
@@ -332,6 +348,13 @@ li
   .featured
   {
   }
+  
+  .featured li div /*used for AA images*/
+  {
+    display: inline-block;
+    width:256px;
+    /*width: 29%*/
+  }
 
   .featured li a div
   {
@@ -343,6 +366,11 @@ li
   {
     display: inline-block;
     /*border:2px solid #333333;*/
+  }
+  
+  #AA_image { 
+    width: 256px;
+    height: 256px;
   }
   
   /*****************GameBox*******************/
