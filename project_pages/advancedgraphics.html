@@ -102,18 +102,38 @@
       </div >
       
       <!-- AA -->
-      <div id="AA">
+      <div class="featured" id="AA">
       <h3>Anti-Aliasing</h3>
       
-      <h4>No Anti-Aliasing</h4>
-      <p><img src=".././img/PersonalProjects/AdvancedGraphics/AA_none.png" alt="Screen-Space Anti-Aliasing screenshot"></img></p>
+      <ul>   
+        <li>
+          <div>
+          
+          <h3>No Anti-Aliasing</h3>
+          <img id="AA_image" class="pixelperfect" src=".././img/PersonalProjects/AdvancedGraphics/AA_256_none.png" alt="Swordsdwarf" title="32x32" width="256" height="256"></img>
+          
+          </div>
+        </li>
+        <li>
+          <div>
+          
+          <h3>Screen-Space Anti-Aliasing</h3>
+          <img id="AA_image" class="pixelperfect" src=".././img/PersonalProjects/AdvancedGraphics/AA_256_PP.png" alt="Swordsdwarf" title="32x32" width="100%"></img>
+          
+          </div>
+        </li>
+        <li>
+          <div overflow="hidden">
+          
+          <h3>Super-Sampling Anti-Aliasing</h3>
+          <img  id="AA_image" class="pixelperfect" src=".././img/PersonalProjects/AdvancedGraphics/AA_256_SS.png" alt="Swordsdwarf" title="32x32" width="100%"></img>
+          
+          </div>
+        </li>
+      </ul>
       
-      <h4>Screen-Space Anti-Aliasing</h4>
-      <p><img src=".././img/PersonalProjects/AdvancedGraphics/AA_PP.png" alt="Screen-Space Anti-Aliasing screenshot"></img></p>
-      
-      <h4>Super-Sampling Anti-Aliasing</h4>
-      <p><img src=".././img/PersonalProjects/AdvancedGraphics/AA_SS.png" alt="Super-Sampling Anti-Aliasing screenshot"></img></p>
-      </div >
+      <p>Screen-Space Anti-Aliasing is a post processing effect that detects the edges with a Sobel filter and blurs them. This way the aliasing artifacts are less visible.</p>
+      <p>In my Super-Sampling Anti-Aliasing I render the whole scene at twice the resolution and then downscale it using bilinear filtering. This is quite expensive as 4x more pixels have to be processed throughout the whole graphics pipeline</p>
       
       <!-- BLOOM -->
       <div id="bloom">
