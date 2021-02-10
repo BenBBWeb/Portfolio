@@ -50,6 +50,24 @@ body p a:active {
 }
 */
 
+/*****************Name Link*******************/
+/*should not react on hover*/
+.name_link a
+{
+}
+.name_link a
+{
+  color:Red;
+  background-color: transparent;
+  text-decoration:none; /*removes underline*/
+}
+.name_link a:hover
+{
+  color:Red;
+  background-color: transparent;
+  text-decoration:none; /*removes underline*/
+}
+
 /**********Border***************/
 #chaosborder
 { 
