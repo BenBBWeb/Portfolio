@@ -50,6 +50,8 @@ body p a:active {
 }
 */
 
+/*****************Gamebox content*******************/
+
 /*****************Name Link*******************/
 /*should not react on hover*/
 .name_link a
@@ -86,30 +88,15 @@ header h1
 {
   float:left;
 }
-#indexheaderh1 /*spetial for index page*/
-{
-  float:none;
-  color:red;
-}
-
 /****************Nav*******************/
 nav
 {
   float:right;
 }
-#indexnav /*spetial for index page*/
-{
-  float:none;
-}
 nav ul
 {
   float:right;
   padding-top:45px; /*to make it aligned with the h1*/
-}
-#indexul /*spetial for index page*/
-{
-  float:none;
-  padding-top:auto;
 }
 nav ul li
 {
@@ -200,6 +187,19 @@ li
   display: block; 
 }
 
+.container a p
+{
+  color:White;
+  text-decoration:none;
+}
+
+.container a p, .container a p:hover, .container a p:link, .container a p:visited, .container a p:link:active, .container a p:visited:active
+{
+  color:White;
+  background-color: transparent;
+  text-decoration:none; /*removes underline*/
+  font-weight:normal;
+}
 
 
 /**********************************************************/
@@ -207,24 +207,29 @@ li
 /**********************************************************/
 
 /*****************GameBox*******************/
-.gamebox
+
+.container a .gamebox
 {
   background-color: #000000;
-  height:256px;
   overflow:hidden; /* so whats outside is hidden */
-  margin: 5px 0 5px 0;
+  margin: 5px 0 5px 0; /* to have vertical separation between the games */
   border:2px solid #333333;
+  padding:0;
 }
-.gamebox a img
+.container a .gamebox:hover
 {
-  height:calc(100% - 2*2px); /*padding is 2px*/
-  float:left;
-  padding:2px;
-}
-.gamebox a img:hover
-{
+  background-color: #000000;
+  overflow:hidden; /* so whats outside is hidden */
+  margin: 5px 0 5px 0; /* to have vertical separation between the games */
   border:2px solid yellow;
   padding:0;
+}
+
+.container a .gamebox img
+{
+  height:254px;/*254px;*/
+  float:left;
+  padding:2px;
 }
 
 /*****************Trailer*******************/
@@ -392,14 +397,43 @@ li
   }
   
   /*****************GameBox*******************/
-  .gamebox
+  .container a .gamebox
   {
     height:auto; /*to have the text wrap under the image if needed*/
   }
-  .gamebox a img
+  .container a .gamebox img
   {
-    height:calc(100% - 2*2px); /*padding is 2px*/
+    width:254px;
+    height:auto;
     float:center;
     padding:2px;
+    display: block; 
+  }
+
+}
+
+/* Media Querie used to change layout for mobiles */
+@media(max-width:512px)
+{
+  
+  /*****************GameBox*******************/
+  
+  /*
+  For very narrow screens, there is no room after the image
+  to have any text. So we make the image span the full div width
+  and have the text at its bottom
+  */
+  .container a .gamebox img
+  {
+    width:calc(100% - 2*2px);
+    height:auto;
+    float:center;
+    padding:2px;
+    display: block; 
+  }
+  .container a .gamebox h3
+  {
+    clear: both; /*to make title be in new line */
+    text-align: center;
   }
 }
