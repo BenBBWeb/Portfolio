@@ -53,6 +53,15 @@ body p a:active {
 /*****************Gamebox content*******************/
 
 /*****************Name Link*******************/
+
+/*for the index, there is no link, and
+it should be displayed centered and */
+#indexheaderh1
+{
+  float:none;
+  color:red;
+}
+
 /*should not react on hover*/
 .name_link a
 {
